@@ -20,7 +20,7 @@ std = ["fun-html/std"]
 
 [dependencies]
 # Public
-fun-html = { version = "1", default-features = false, optional = true }
+fun-html = { version = "1", default-features = false }
 
 [dev-dependencies]
 rstest = { version = "0.23", default-features = false }
