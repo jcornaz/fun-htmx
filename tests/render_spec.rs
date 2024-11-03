@@ -31,6 +31,7 @@ use rstest::rstest;
 )]
 #[case(hx_boost(true), "hx-boost=\"true\"")]
 #[case(hx_boost(false), "hx-boost=\"false\"")]
+// TODO #[case(hx_on("click", "alert('hello')"), "hx-on:click=\"alert('hello')\"")]
 fn should_render_htmx_attribute(#[case] attribute: Attribute, #[case] expected: &str) {
     assert_eq!(attribute.to_string(), expected);
 }
