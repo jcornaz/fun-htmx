@@ -1,6 +1,23 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 #![cfg_attr(docsrs, feature(doc_auto_cfg))]
-// TODO #![warn(missing_docs)]
+#![warn(missing_docs)]
+
+//! This crate provides a collection of HTMX attributes for [`fun-html`](https://github.com/jcornaz/fun-html/)
+//!
+//! # Example
+//!
+//! ```
+//! use fun_html::{elt::{script_empty, button, text}, attr::src};
+//! use fun_htmx::{hx_get, hx_swap_outer_html};
+//!
+//! let quick_start = [
+//!    script_empty([src("https://unpkg.com/htmx.org@2.0.3")]),
+//!    button(
+//!      [hx_get("/clicked"), hx_swap_outer_html()],
+//!      text("Click Me")
+//!    ),
+//! ];
+//! ```
 
 extern crate alloc;
 

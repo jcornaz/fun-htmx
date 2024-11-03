@@ -3,9 +3,22 @@
 ![License](https://img.shields.io/github/license/jcornaz/fun-htmx)
 ![MSRV](https://img.shields.io/crates/msrv/fun-htmx)
 
-HTMX attributes for [fun-html]
+This crate provides a collection of HTMX attributes for [`fun-html`](https://github.com/jcornaz/fun-html/)
 
-[fun-html]: https://github.com/jcornaz/fun-html
+# Example
+
+```
+use fun_html::{elt::{script_empty, button, text}, attr::src};
+use fun_htmx::{hx_get, hx_swap_outer_html};
+
+let quick_start = [
+  script_empty([src("https://unpkg.com/htmx.org@2.0.3")]),
+  button(
+    [hx_get("/clicked"), hx_swap_outer_html()],
+    text("Click Me")
+  ),
+];
+```
 
 
 ## Feature flags
