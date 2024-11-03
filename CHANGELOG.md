@@ -7,6 +7,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+
+## [1.0.0] - 2024-11-03
+
 ### Added
 
 * `hx_get`, `hx_post`, `hx_put`, `hx_patch` and `hx_delete`
@@ -17,4 +20,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 * `hx_boost`
 * `hx_on`, `hx_on_htmx_before_request` and `hx_on_htmx_after_request`
 
-[Unreleased]: https://github.com/jcornaz/fun-htmx/compare/...HEAD
+[Unreleased]: https://github.com/jcornaz/fun-htmx/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/jcornaz/fun-htmx/compare/...v1.0.0
