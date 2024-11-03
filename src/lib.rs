@@ -8,6 +8,11 @@ use alloc::borrow::Cow;
 
 use fun_html::Attribute;
 
+/// [`hx-boost`](https://htmx.org/attributes/hx-boost/) attribute
+pub fn hx_boost(value: bool) -> Attribute {
+    Attribute::new("hx-boost", boolean(value))
+}
+
 /// [`hx-get`](https://htmx.org/attributes/hx-get/) attribute
 pub fn hx_get(path: impl Into<Cow<'static, str>>) -> Attribute {
     Attribute::new("hx-get", path)
@@ -118,7 +123,7 @@ pub fn hx_swap_none() -> Attribute {
 
 /// [`hx-push-url`](https://htmx.org/attributes/hx-push-url/) attribute using a boolean
 pub fn hx_push_url(value: bool) -> Attribute {
-    hx_push_url_str(if value { "true" } else { "false" })
+    hx_push_url_str(boolean(value))
 }
 
 /// [`hx-push-url`](https://htmx.org/attributes/hx-push-url/) attribute using an URL
@@ -136,4 +141,12 @@ pub fn hx_swap_oob() -> Attribute {
 /// [`hx-swap-oob`](https://htmx.org/attributes/hx-swap-oob/) attribute
 pub fn hx_swap_oob_swap(value: impl Into<Cow<'static, str>>) -> Attribute {
     Attribute::new("hx-swap-oob", value)
+}
+
+fn boolean(value: bool) -> &'static str {
+    if value {
+        "true"
+    } else {
+        "false"
+    }
 }

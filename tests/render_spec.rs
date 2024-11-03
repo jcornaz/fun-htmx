@@ -29,6 +29,8 @@ use rstest::rstest;
     hx_swap_oob_swap("innerHTML swap:3s"),
     "hx-swap-oob=\"innerHTML swap:3s\""
 )]
+#[case(hx_boost(true), "hx-boost=\"true\"")]
+#[case(hx_boost(false), "hx-boost=\"false\"")]
 fn should_render_htmx_attribute(#[case] attribute: Attribute, #[case] expected: &str) {
     assert_eq!(attribute.to_string(), expected);
 }
