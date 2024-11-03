@@ -19,9 +19,9 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "fun-html"
-version = "1.0.0"
+version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4aa7e485d48e1f5fffbd08e734f721c86a8110dddc8a2f2955a74efbfa28fda3"
+checksum = "33c1b791d60078123c137a547f98b390e72009229c397b4e7c163b69f030502d"
 dependencies = [
  "html-escape",
 ]

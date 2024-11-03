@@ -143,6 +143,21 @@ pub fn hx_swap_oob_swap(value: impl Into<Cow<'static, str>>) -> Attribute {
     Attribute::new("hx-swap-oob", value)
 }
 
+/// [`hx-on*`](https://htmx.org/attributes/hx-on/) attributes
+pub fn hx_on(event: &'static str, action: impl Into<Cow<'static, str>>) -> Attribute {
+    Attribute::new_unsafe_name(alloc::format!("hx-on:{event}"), action)
+}
+
+/// [`hx-on:htmx:before-request`](https://htmx.org/attributes/hx-on/) attribute
+pub fn hx_on_htmx_before_request(action: impl Into<Cow<'static, str>>) -> Attribute {
+    Attribute::new("hx-on::before-request", action)
+}
+
+/// [`hx-on:htmx:after-request`](https://htmx.org/attributes/hx-on/) attribute
+pub fn hx_on_htmx_after_request(action: impl Into<Cow<'static, str>>) -> Attribute {
+    Attribute::new("hx-on::after-request", action)
+}
+
 fn boolean(value: bool) -> &'static str {
     if value {
         "true"
