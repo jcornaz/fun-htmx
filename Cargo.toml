@@ -1,0 +1,26 @@
+[package]
+name = "fun-htmx"
+version = "1.1.0"
+license = "MIT"
+authors = ["Jonathan Cornaz"]
+edition = "2021"
+rust-version = "1.60"
+repository = "https://github.com/jcornaz/fun-htmx"
+description = "HTMX attributes for `fun-html`"
+categories = ["template-engine"]
+keywords = ["html", "web", "functional", "htmx", "fun-html"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[features]
+default = ["std"]
+std = ["fun-html/std"]
+
+[dependencies]
+# Public
+fun-html = { version = "1", default-features = false, optional = true }
+
+[dev-dependencies]
+rstest = { version = "0.23", default-features = false }
