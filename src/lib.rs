@@ -2,7 +2,7 @@
 #![cfg_attr(docsrs, feature(doc_auto_cfg))]
 #![warn(missing_docs)]
 
-//! This crate provides a collection of HTMX attributes for [`fun-html`](https://github.com/jcornaz/fun-html/)
+//! This crate provides a collection of [HTMX](https://htmx.org) attributes for [`fun-html`](https://github.com/jcornaz/fun-html/)
 //!
 //! # Example
 //!

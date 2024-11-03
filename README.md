@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/github/license/jcornaz/fun-htmx)
 ![MSRV](https://img.shields.io/crates/msrv/fun-htmx)
 
-This crate provides a collection of HTMX attributes for [`fun-html`](https://github.com/jcornaz/fun-html/)
+This crate provides a collection of [HTMX](https://htmx.org) attributes for [`fun-html`](https://github.com/jcornaz/fun-html/)
 
 # Example
 
