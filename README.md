@@ -1,7 +1,11 @@
 # fun-htmx
 
-![License](https://img.shields.io/github/license/jcornaz/fun-htmx)
+[![Crates.io Version](https://img.shields.io/crates/v/fun-htmx)](https://crates.io/crates/fun-htmx)
+[![License](https://img.shields.io/github/license/jcornaz/fun-htmx)](./LICENSE)
 ![MSRV](https://img.shields.io/crates/msrv/fun-htmx)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/jcornaz/fun-htmx/.github%2Fworkflows%2Fcheck.yml?branch=main)](https://github.com/jcornaz/fun-htmx/actions/workflows/check.yml?query=branch%3Amain)
+[![docs.rs](https://img.shields.io/docsrs/fun-htmx)](https://docs.rs/fun-htmx)
+
 
 This crate provides a collection of [HTMX](https://htmx.org) attributes for [`fun-html`](https://github.com/jcornaz/fun-html/)
 
