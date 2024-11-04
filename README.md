@@ -11,7 +11,7 @@ This crate provides a collection of [HTMX](https://htmx.org) attributes for [`fu
 
 # Example
 
-```
+```rust
 use fun_html::{elt::{script_empty, button, text}, attr::src};
 use fun_htmx::{hx_get, hx_swap_outer_html};
 
