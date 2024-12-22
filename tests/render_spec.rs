@@ -41,6 +41,10 @@ use rstest::rstest;
     "hx-on::after-request=\"alert('hello')\""
 )]
 #[case(hx_confirm("are you sure?"), "hx-confirm=\"are you sure?\"")]
+#[case(
+    hx_vals("{ \"foo\": \"bar\" }"),
+    "hx-vals=\"{ &quot;foo&quot;: &quot;bar&quot; }\""
+)]
 fn should_render_htmx_attribute(#[case] attribute: Attribute, #[case] expected: &str) {
     assert_eq!(attribute.to_string(), expected);
 }

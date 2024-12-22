@@ -28,6 +28,7 @@ let quick_start = [
 ## Feature flags
 
 * `std`: enabled by default. must be disabled to compile to `no_std`
+* `serde_json`: Add utilities like `hx_vals_serde(values: &impl Serialize)` that relies on `serde` serialization to output json
 
 
 ## MSRV

@@ -18,6 +18,11 @@
 //!    ),
 //! ];
 //! ```
+//! ## Feature flags
+//!
+//! * `std`: enabled by default. must be disabled to compile to `no_std`
+//! * `serde_json`: Add utilities like `hx_vals_serde(values: &impl Serialize)` that relies on `serde` serialization to output json
+//!
 
 extern crate alloc;
 
@@ -178,6 +183,23 @@ pub fn hx_on_htmx_before_request(action: impl Into<Cow<'static, str>>) -> Attrib
 /// [`hx-on:htmx:after-request`](https://htmx.org/attributes/hx-on/) attribute
 pub fn hx_on_htmx_after_request(action: impl Into<Cow<'static, str>>) -> Attribute {
     Attribute::new("hx-on::after-request", action)
+}
+
+/// [`hx-vals`](https://htmx.org/attributes/hx-vals/) attribute
+pub fn hx_vals(values: impl Into<Cow<'static, str>>) -> Attribute {
+    Attribute::new("hx-vals", values)
+}
+
+/// [`hx-vals`](https://htmx.org/attributes/hx-vals/) attribute using `serde` Serialization
+///
+/// The `values` must not fail to serialize.
+///
+/// # Panics
+///
+/// Panics if the serialization of `values` fail
+#[cfg(feature = "serde_json")]
+pub fn hx_vals_serde(values: &impl serde::Serialize) -> Attribute {
+    hx_vals(serde_json::to_string(values).expect("hx-vals values should not fail to serialize"))
 }
 
 fn boolean(value: bool) -> &'static str {
