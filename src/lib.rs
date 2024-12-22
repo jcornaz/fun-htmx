@@ -190,6 +190,25 @@ pub fn hx_vals(values: impl Into<Cow<'static, str>>) -> Attribute {
     Attribute::new("hx-vals", values)
 }
 
+/// [`hx-disinherit`](https://htmx.org/attributes/hx-disinherit/) attribute
+pub fn hx_disinherit(attributes: impl IntoIterator<Item = &'static str>) -> Attribute {
+    let mut iter = attributes.into_iter();
+    let mut string = iter
+        .next()
+        .map(alloc::string::String::from)
+        .unwrap_or_default();
+    for value in iter {
+        string.push(' ');
+        string.push_str(value);
+    }
+    Attribute::new("hx-disinherit", string)
+}
+
+/// [`hx-disinherit="*"`](https://htmx.org/attributes/hx-disinherit/)
+pub fn hx_disinherit_all() -> Attribute {
+    Attribute::new("hx-disinherit", "*")
+}
+
 /// [`hx-vals`](https://htmx.org/attributes/hx-vals/) attribute using `serde` Serialization
 ///
 /// The `values` must not fail to serialize.

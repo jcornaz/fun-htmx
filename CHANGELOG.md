@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added attributes
 
 * `hx_confirm`
+* `hx_disinherit` and `hx_disinherit_all`
 * `hx_vals` and `hx_vals_serde` (the latter is behind a new `serde_json` feature flag)
 
 

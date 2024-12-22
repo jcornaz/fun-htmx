@@ -45,6 +45,8 @@ use rstest::rstest;
     hx_vals("{ \"foo\": \"bar\" }"),
     "hx-vals=\"{ &quot;foo&quot;: &quot;bar&quot; }\""
 )]
+#[case(hx_disinherit(["hx-select", "hx-target"]), "hx-disinherit=\"hx-select hx-target\"")]
+#[case(hx_disinherit_all(), "hx-disinherit=\"*\"")]
 fn should_render_htmx_attribute(#[case] attribute: Attribute, #[case] expected: &str) {
     assert_eq!(attribute.to_string(), expected);
 }
