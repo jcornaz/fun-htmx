@@ -148,6 +148,11 @@ pub fn hx_push_url_str(url: impl Into<Cow<'static, str>>) -> Attribute {
     Attribute::new("hx-push-url", url)
 }
 
+/// [`hx-confirm`](https://htmx.org/attributes/hx-confirm/) attribute
+pub fn hx_confirm(value: impl Into<Cow<'static, str>>) -> Attribute {
+    Attribute::new("hx-confirm", value)
+}
+
 /// `hx-swap-oob="true"
 ///
 /// See [`hx-swap`](https://htmx.org/attributes/hx-swap/) attribute
