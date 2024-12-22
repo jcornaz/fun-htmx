@@ -7,6 +7,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+
+## [1.1.0] - 2024-12-22
+
 ### Added attributes
 
 * `hx_confirm`
@@ -26,5 +29,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 * `hx_boost`
 * `hx_on`, `hx_on_htmx_before_request` and `hx_on_htmx_after_request`
 
-[Unreleased]: https://github.com/jcornaz/fun-htmx/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/jcornaz/fun-htmx/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/jcornaz/fun-htmx/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/jcornaz/fun-htmx/compare/...v1.0.0
