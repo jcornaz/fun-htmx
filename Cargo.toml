@@ -23,7 +23,7 @@ serde_json = ["dep:serde", "dep:serde_json"]
 # Public
 fun-html = { version = "1.2", default-features = false }
 serde = { version = "1.0.114", default-features = false, optional = true }
-serde_json = { version = "1.0.45", default-features = false, optional = true, features = ["alloc"] }
+serde_json = { version = "1.0.134", default-features = false, optional = true, features = ["alloc"] }
 
 [dev-dependencies]
 rstest = { version = "0.24", default-features = false }
