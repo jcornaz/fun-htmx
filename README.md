@@ -5,7 +5,7 @@
 ![MSRV](https://img.shields.io/crates/msrv/fun-htmx)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/jcornaz/fun-htmx/.github%2Fworkflows%2Fcheck.yml?branch=main)](https://github.com/jcornaz/fun-htmx/actions/workflows/check.yml?query=branch%3Amain)
 [![docs.rs](https://img.shields.io/docsrs/fun-htmx)](https://docs.rs/fun-htmx)
-
+![Maintenance](https://img.shields.io/maintenance/passively/2025)
 
 This crate provides a collection of [HTMX](https://htmx.org) attributes for [`fun-html`](https://github.com/jcornaz/fun-html/)
 
