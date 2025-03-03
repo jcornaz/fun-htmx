@@ -26,5 +26,5 @@ serde = { version = "1.0.114", default-features = false, optional = true }
 serde_json = { version = "1.0.45", default-features = false, optional = true, features = ["alloc"] }
 
 [dev-dependencies]
-rstest = { version = "0.24", default-features = false }
+rstest = { version = "0.25", default-features = false }
 serde = { version = "1", features = ["derive"] }
